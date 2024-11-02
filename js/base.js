@@ -46,6 +46,7 @@ function AddEventsToDay(thisday, day) {
             let event = document.createElement("div");
             event.classList.add("event");
             event.dataset.eventindex = i;
+            event.dataset.eventdate = events.data[i].Event_Dates[j].Event_Start_Date;
 
             let title = document.createElement("div");
             title.classList.add("title");
@@ -117,7 +118,7 @@ function AutoPlay(focusElement) {
    }, 15000);
 }
 
-function GetHtmlForEvent(index) {
+function GetHtmlForEvent(index, eventdate) {
 
    let event = document.createElement("div");
    const str = events.data[index].Event_Title.replaceAll(' ', '-').toLowerCase();
@@ -148,7 +149,7 @@ function GetHtmlForEvent(index) {
 
    let date = document.createElement("div");
    date.classList.add("date");
-   date.innerHTML = events.data[index].Event_Start_Date;
+   date.innerHTML = eventdate;
 
    let details = document.createElement("div");
    details.classList.add("details");
@@ -172,7 +173,7 @@ function ClickPlay(focusElement) {
          focusElement.style.display = "block";
          focusElement.style.opacity = 1;
          focusElement.innerHTML = null;
-         focusElement.appendChild(GetHtmlForEvent(element.dataset.eventindex));
+         focusElement.appendChild(GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate));
       });
    });
 }
@@ -180,7 +181,7 @@ function ClickPlay(focusElement) {
 function SetFocusWithEvent(focusElement, element ) {
    focusElement.classList.remove("active");
    focusElement.innerHTML = null;
-   focusElement.appendChild(GetHtmlForEvent(element.dataset.eventindex));
+   focusElement.appendChild(GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate));
    setTimeout(function() {
       focusElement.classList.add("active");
    }, 100);
