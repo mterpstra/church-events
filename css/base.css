@@ -45,7 +45,6 @@ body {
    display:flex;
    flex-direction:column;
    justify-content:space-around;
-
    color:var(--darkblue);
 }
 
@@ -54,8 +53,12 @@ body {
    display:flex;
 }
 
-.outside-the-month {
+.outside-the-month, .today {
    background:var(--darkblue);
+}
+
+.outside-the-month, .today span {
+   color:white;
 }
 
 .week > div {

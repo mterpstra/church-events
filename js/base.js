@@ -93,6 +93,7 @@ function GenerateCalendar(month) {
       "September", "October", "November", "December"];
 
    const WEEKS_IN_CALENDAR = 5;
+   const now = new Date();
 
    const container = document.getElementById("days-container");
    let today = new Date();
@@ -116,12 +117,18 @@ function GenerateCalendar(month) {
          const day = document.createElement("div");
          day.classList.add("day");
 
+         if (now.toDateString() == thisday.toDateString()) {
+            day.classList.add("today");
+         }
+
          // Maybe we don't want this...
          if (today.getMonth() != thisday.getMonth()) {
             day.classList.add("outside-the-month");
          }
 
-         day.innerHTML = thisday.getDate();
+         day.innerHTML = `<span>${thisday.getDate()}</span>`;
+
+
          AddEventsToDay(thisday, day);
          week.appendChild(day);
          counter++;
@@ -133,7 +140,8 @@ function GenerateCalendar(month) {
 function AutoPlay(focusElement) {
    focusElement.style.display = "block";
    const elements = document.querySelectorAll('.event');
-   let i=0;
+   SetFocusWithEvent(focusElement, elements[0]) ;
+   let i=1;
    setInterval(function() {
       SetFocusWithEvent(focusElement, elements[i]) ;
       if (i < elements.length-1) {
