@@ -73,7 +73,7 @@ const events = {
       {
          "Event_Title": "Men's Event",
          "Description": "Be sure to register for our upcoming Men's Event on November 16th!  Men (including kids/students) are invited to join us for an exciting day in Okeechobee. We'll meet at the church at 10 AM and head out for airboat rides, shooting, great food, and time together in community. Don't miss this chance to connect and have some fun - <a href='https://docs.google.com/forms/d/e/1FAIpQLSfvziRGKqPaQjGQCio01n8Xo69lUaCE0i4SfZuSPJF1OcXvaA/viewform?pli=1' target='_blank'>register here</a> if you haven't already!",
-         "Event_Start_Date": "2024-11-16T01:00:00",
+         "Event_Start_Date": "2024-11-16T10:00:00",
          "Graphic_URL":"images/mens_retreat.jpg",
          "Location": {
             "Location_Name":"Jupiter"
@@ -97,6 +97,20 @@ const events = {
          },
          "Primary_Contact": {
             "Display_Name": "Evie Komara"
+         }
+      },
+      {
+         "Event_Title": "Decorate the Church",
+         "Description": "Looking for people to help decorate our church for the holidays.  We will be decorating on after that last service on Nov 24th.",
+         "Event_Dates": [
+            {"Event_Start_Date":"2024-11-24T13:00:00"}
+         ],
+         "Graphic_URL":"https://cdn.prod.website-files.com/5c424ebbff0f5071e82b42e1/654816c22a098c10637e7359_a221rYmP4J6dwSJpAOXoHS1mBLJ22n7OeH8_dXtZtWPwaYarmtVDawdfiFy3FGjyXg8GU5mE_yslUYjP48fdH3GnKnmctHG99bTZyEutJKs_R27UYkC96ea6jIsfRuWqcsv7IzCOn9b9R8X64cZTJoIbrprFTh_h7om8SUFeNdVNZBnrtnyxUcPE5pezG6KQuNz3s0Pznw.jpeg",
+         "Location": {
+            "Location_Name":"Jupiter"
+         },
+         "Primary_Contact": {
+            "Display_Name": "Billy Baroo"
          }
       }
    ]

@@ -20,6 +20,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
    }
 });
 
+// Returns a valid date object.  Despite leading zeros.
+function ParseDate(input) {
+   let temp = input;
+   temp = temp.replaceAll("T", "-");
+   temp = temp .replaceAll(":", "-");
+   let parts = temp.split("-");
+   if (parts.length != 6) {
+      console.log("Invalid Date", input);
+      return null;
+   }
+   return new Date( 
+      parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2]),
+      parseInt(parts[3]), parseInt(parts[4]), parseInt(parts[5]))
+}
+
+function GetDisplayDate(dateString) {
+   let date = ParseDate(dateString);
+   let hours = date.getHours();
+   const amPm = hours >= 12 ? 'PM' : 'AM';
+   hours = hours % 12;
+   hours = hours ? hours : 12; // If hours is 0, set it to 12
+   const minutes = date.getMinutes();
+   const timeString = `${date.toDateString()} ${hours}:${minutes.toString().padStart(2, '0')} ${amPm}`;
+   return timeString;
+}
+
 // Makes sure all events have a "Event_Dates" array.
 function PopulateEventDatesArray() {
    for(var i=0; i < events.data.length; i++) {
@@ -149,7 +175,7 @@ function GetHtmlForEvent(index, eventdate) {
 
    let date = document.createElement("div");
    date.classList.add("date");
-   date.innerHTML = eventdate;
+   date.innerHTML = GetDisplayDate(eventdate);
 
    let details = document.createElement("div");
    details.classList.add("details");
