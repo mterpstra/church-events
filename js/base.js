@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
    }
 });
 
-// Returns a valid date object.  Despite leading zeros.
 function ParseDate(input) {
    let temp = input;
    temp = temp.replaceAll("T", "-");
@@ -31,8 +30,8 @@ function ParseDate(input) {
       return null;
    }
    return new Date( 
-      parseInt(parts[0]), parseInt(parts[1]), parseInt(parts[2]),
-      parseInt(parts[3]), parseInt(parts[4]), parseInt(parts[5]))
+      parseInt(parts[0]), parseInt(parts[1])-1, parseInt(parts[2]),
+      parseInt(parts[3]), parseInt(parts[4]),   parseInt(parts[5]))
 }
 
 function GetDisplayDate(dateString) {
@@ -46,7 +45,6 @@ function GetDisplayDate(dateString) {
    return timeString;
 }
 
-// Makes sure all events have a "Event_Dates" array.
 function PopulateEventDatesArray() {
    for(var i=0; i < events.data.length; i++) {
       if (events.data[i].Event_Dates == null) {
@@ -59,7 +57,6 @@ function PopulateEventDatesArray() {
    }
 }
 
-// Look in the events and add them to the day
 function AddEventsToDay(thisday, day) {
    for(var i=0; i < events.data.length; i++) {
       for (j=0; j < events.data[i].Event_Dates.length; j++) {
@@ -70,7 +67,7 @@ function AddEventsToDay(thisday, day) {
          if (testing == start) {
 
             let event = document.createElement("div");
-            event.classList.add("event");
+            event.classList.add("event-preview");
             event.dataset.eventindex = i;
             event.dataset.eventdate = events.data[i].Event_Dates[j].Event_Start_Date;
 
@@ -86,7 +83,6 @@ function AddEventsToDay(thisday, day) {
 }
 
 function GenerateCalendar(month) {
-
    const months = [
       "January", "February", "March", "April", 
       "May", "June", "July", "August", 
@@ -101,9 +97,7 @@ function GenerateCalendar(month) {
       month = month-1;
       today = new Date(today.getFullYear(), month, 1);
    } 
-   console.log("month", month, "today", today);
    const first = new Date(today.getFullYear(), today.getMonth(), 1);
-
    document.getElementById("month").innerHTML = months[today.getMonth()];
 
    // Hmm, make sure this is correct...
@@ -127,8 +121,6 @@ function GenerateCalendar(month) {
          }
 
          day.innerHTML = `<span>${thisday.getDate()}</span>`;
-
-
          AddEventsToDay(thisday, day);
          week.appendChild(day);
          counter++;
@@ -139,7 +131,7 @@ function GenerateCalendar(month) {
 
 function AutoPlay(focusElement) {
    focusElement.style.display = "block";
-   const elements = document.querySelectorAll('.event');
+   const elements = document.querySelectorAll('.event-preview');
    SetFocusWithEvent(focusElement, elements[0]) ;
    let i=1;
    setInterval(function() {
@@ -153,69 +145,45 @@ function AutoPlay(focusElement) {
 }
 
 function GetHtmlForEvent(index, eventdate) {
-
-   let event = document.createElement("div");
+   const img = `<img src="${events.data[index].Graphic_URL}">`;
+   const graphic = `<div class="graphic">${img}</div>`;
+   const title = `<div class="title">${events.data[index].Event_Title}</div>`;
+   const description = `<div class="description">${events.data[index].Description}</div>`;
+   const location = `<div class="location">${events.data[index].Location.Location_Name}</div>`;
+   const contact = `<div class="contact">${events.data[index].Primary_Contact.Display_Name}</div>`;
+   const date = `<div class="date">${GetDisplayDate(eventdate)}</div>`;
+   const details = `<div class="details">${description + location + contact + date}</div>`;
    const str = events.data[index].Event_Title.replaceAll(' ', '-').toLowerCase();
-   event.classList.add("event");
-   event.classList.add(str);
-
-   let title = document.createElement("div");
-   title.classList.add("title");
-   title.innerHTML = events.data[index].Event_Title;
-
-   let graphic = document.createElement("div");
-   let img = document.createElement("img");
-   img.src = events.data[index].Graphic_URL;
-   graphic.classList.add("graphic");
-   graphic.appendChild(img);
-
-   let description = document.createElement("div");
-   description.classList.add("description");
-   description.innerHTML = events.data[index].Description;
-
-   let contact = document.createElement("div");
-   contact.classList.add("contact");
-   contact.innerHTML = events.data[index].Primary_Contact.Display_Name;
-
-   let location = document.createElement("div");
-   location.classList.add("location");
-   location.innerHTML = events.data[index].Location.Location_Name;
-
-   let date = document.createElement("div");
-   date.classList.add("date");
-   date.innerHTML = GetDisplayDate(eventdate);
-
-   let details = document.createElement("div");
-   details.classList.add("details");
-
-   details.appendChild(description);
-   details.appendChild(location);
-   details.appendChild(contact);
-   details.appendChild(date);
-
-   event.appendChild(title);
-   event.appendChild(graphic);
-   event.appendChild(details);
-
+   const event = `<div class="event ${str}">${title + graphic + details}</div>`;
    return event;
 }
 
 function ClickPlay(focusElement) {
-   const elements = document.querySelectorAll('.event');
+   const elements = document.querySelectorAll('.event-preview');
    elements.forEach(element => {
       element.addEventListener('click', function(e) {
+
+         element.classList.add("next");
+         setTimeout(function() {
+            element.classList.remove("next");
+         }, 2000);
+
          focusElement.style.display = "block";
          focusElement.style.opacity = 1;
-         focusElement.innerHTML = null;
-         focusElement.appendChild(GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate));
+         focusElement.innerHTML = 
+            GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate);
       });
    });
 }
 
 function SetFocusWithEvent(focusElement, element ) {
+   element.classList.add("next");
+   setTimeout(function() {
+      element.classList.remove("next");
+   }, 2000);
+
    focusElement.classList.remove("active");
-   focusElement.innerHTML = null;
-   focusElement.appendChild(GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate));
+   focusElement.innerHTML = GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate);
    setTimeout(function() {
       focusElement.classList.add("active");
    }, 100);

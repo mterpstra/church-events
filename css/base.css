@@ -22,7 +22,6 @@ body {
    flex-direction:column;
    justify-content:center;
    align-items:center;
-
    font-size:24px;
    font-weight:bold;
 }
@@ -35,7 +34,6 @@ body {
    flex-direction:row;
    justify-content:space-around;
    align-items:center;
-
    font-size:20px;
    font-weight:bold;
 }
@@ -67,7 +65,7 @@ body {
    padding:2px;
 }
 
-.title {
+.event-preview {
    background:var(--lightblue);
    margin-bottom:5px;
 }
@@ -75,6 +73,7 @@ body {
 .active {
    animation-name: fadein;
    animation-duration: 10s;
+   animation-delay: 2s;
 }
 
 @keyframes fadein {
@@ -111,7 +110,9 @@ body {
    font-size:30px;
    font-weight:bold;
    color:var(--darkblue);
+   background:var(--lightblue);
 }
+
 #focus-event .event .graphic, 
 #focus-event .event .details { 
    width:50%;
@@ -141,7 +142,6 @@ body {
    font-size:24px;
 }
 
-/* Specific to this event */
 .event.journey-through-the-new-testimate img,
 .event.womens-bible-study img {
    height:250px;
