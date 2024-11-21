@@ -1,5 +1,5 @@
 :root {
-   --lightblue:  #b0dbe8;
+   --lightblue:  #72b7d8;
    --darkblue: #00447c;
    --gray: #5f6062;
 }
@@ -19,9 +19,10 @@ body {
    background:var(--darkblue);
    color: white;
    display:flex;
+   align-items:center;
+   flex-direction:row;
    flex-direction:column;
    justify-content:center;
-   align-items:center;
    font-size:24px;
    font-weight:bold;
 }

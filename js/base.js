@@ -98,7 +98,7 @@ function GenerateCalendar(month) {
       today = new Date(today.getFullYear(), month, 1);
    } 
    const first = new Date(today.getFullYear(), today.getMonth(), 1);
-   document.getElementById("month").innerHTML = months[today.getMonth()];
+   document.getElementById("month-name").innerHTML = months[today.getMonth()];
 
    // Hmm, make sure this is correct...
    let counter = -1 * (first.getDay()-1);
