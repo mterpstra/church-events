@@ -2,11 +2,29 @@
    --lightblue:  #72b7d8;
    --darkblue: #00447c;
    --gray: #5f6062;
+
+   --perfect-pearl: #ede6d9;
+   --minty-moses: #ced9b0;
+   --burnished-bronze: #998859;
+   --buoyant-blue: #72b7d8;
+   --cozy-crimson: #743338;
 }
+
+@font-face {
+   font-family: GothamRegular;
+   src: url(../fonts/gotham/gotham-regular/Gotham-Book.ttf);
+}
+
+@font-face {
+   font-family: RamillasRegular;
+   src: url(../fonts/ramillas/TTRamillas-Normal.ttf);
+}
+
 
 * {
    padding:0;
    margin:0;
+   font-family: GothamRegular;
 }
 
 body {
@@ -53,7 +71,7 @@ body {
 }
 
 .outside-the-month, .today {
-   background:var(--darkblue);
+   background:var(--burnished-bronze);
 }
 
 .outside-the-month, .today span {
@@ -69,6 +87,11 @@ body {
 .event-preview {
    background:var(--lightblue);
    margin-bottom:5px;
+}
+
+.event-preview .title {
+   padding:2px;
+   font-size:12px;
 }
 
 .active {
