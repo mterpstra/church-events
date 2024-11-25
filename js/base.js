@@ -1,14 +1,16 @@
+let events = {};
 document.addEventListener("DOMContentLoaded", (event) => {
    const queryString = window.location.search;
    const urlParams = new URLSearchParams(queryString);
    const autoplay = urlParams.get("autoplay");
    const month = urlParams.get("month");
-   console.log("month", month);
    const focusElement = document.getElementById("focus-event");
 
    focusElement.addEventListener('click', function(e) {
       focusElement.style.display = "none";
    });
+
+   events.data = manual_events.data.concat(imported_events.data);
 
    PopulateEventDatesArray();
    GenerateCalendar(month);
@@ -19,6 +21,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
       ClickPlay(focusElement);
    }
 });
+
+
+// Converts a date object to a comparible string: YYYY-MM-DD  (no time).  
+function GetComparableDate(input) {
+   return input.toLocaleDateString('en-CA', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+   });
+}
 
 function ParseDate(input) {
    let temp = input;
@@ -60,11 +72,11 @@ function PopulateEventDatesArray() {
 function AddEventsToDay(thisday, day) {
    for(var i=0; i < events.data.length; i++) {
       for (j=0; j < events.data[i].Event_Dates.length; j++) {
-         const index = events.data[i].Event_Dates[j].Event_Start_Date.indexOf("T");
-         const start = events.data[i].Event_Dates[j].Event_Start_Date.substr(0,index);
-         const testing = `${thisday.getFullYear()}-${thisday.getMonth()+1}-${thisday.getDate()}`
 
-         if (testing == start) {
+         const a = GetComparableDate(new Date(events.data[i].Event_Dates[j].Event_Start_Date));
+         const b = GetComparableDate(thisday);
+
+         if (a == b) {
 
             let event = document.createElement("div");
             event.classList.add("event-preview");
@@ -145,13 +157,22 @@ function AutoPlay(focusElement) {
 }
 
 function GetHtmlForEvent(index, eventdate) {
+
+   if (events.data[index].Graphic_URL == null) {
+      events.data[index].Graphic_URL = './images/family_church_logo.png';
+   }
+
+   if (events.data[index].Description == null) {
+      events.data[index].Description = events.data[index].Event_Title;
+   }
+
    const img = `<img src="${events.data[index].Graphic_URL}">`;
    const graphic = `<div class="graphic">${img}</div>`;
    const title = `<div class="title">${events.data[index].Event_Title}</div>`;
    const description = `<div class="description">${events.data[index].Description}</div>`;
-   const location = `<div class="location">${events.data[index].Location.Location_Name}</div>`;
-   const contact = `<div class="contact">${events.data[index].Primary_Contact.Display_Name}</div>`;
-   const date = `<div class="date">${GetDisplayDate(eventdate)}</div>`;
+   const location = `<div class="location">Where: ${events.data[index].Location.Location_Name}</div>`;
+   const contact = `<div class="contact">Contact: ${events.data[index].Primary_Contact.Display_Name}</div>`;
+   const date = `<div class="date">When: ${GetDisplayDate(eventdate)}</div>`;
    const details = `<div class="details">${description + location + contact + date}</div>`;
    const str = events.data[index].Event_Title.replaceAll(' ', '-').toLowerCase();
    const event = `<div class="event ${str}">${title + graphic + details}</div>`;

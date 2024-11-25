@@ -1,4 +1,4 @@
-const events = {
+const manual_events = {
    "data": [
       {
          "Event_Title": "Manos Unidas",
@@ -34,10 +34,10 @@ const events = {
          "Description": "Go through the Psalms, in this group setting...",
          "Graphic_URL":"images/family_church_logo.png",
          "Event_Dates": [
-            { "Event_Start_Date": "2024-11-7T18:30:00", },
-            { "Event_Start_Date": "2024-11-14T18:30:00", },
-            { "Event_Start_Date": "2024-11-21T18:30:00", },
-            { "Event_Start_Date": "2024-11-28T18:30:00", }
+            { "Event_Start_Date": "2024-11-7T18:30:00"  },
+            { "Event_Start_Date": "2024-11-14T18:30:00" },
+            { "Event_Start_Date": "2024-11-21T18:30:00" },
+            { "Event_Start_Date": "2024-11-28T18:30:00" }
          ],
          "Location": {
             "Location_Name":"Jupiter"
