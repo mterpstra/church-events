@@ -1,0 +1,10 @@
+.preview-event {
+   margin-bottom:5px;
+   border-radius:5px;
+}
+
+.preview-event .event .title {
+   padding:2px;
+   font-size:0.8em;
+   line-height:1.2em;
+}

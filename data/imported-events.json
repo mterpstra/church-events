@@ -1,4 +1,4 @@
-const imported_events = {
+{
    "data": [
       {
          "Allow_Registration": true,
@@ -139,10 +139,10 @@ const imported_events = {
          "Top_Featured": false
       }
    ],
-   "pagination": {
-      "page_num": 1,
-      "page_size": 100,
-      "pages": 1,
-      "total_items": 2
-   }
-};
+      "pagination": {
+         "page_num": 1,
+         "page_size": 100,
+         "pages": 1,
+         "total_items": 2
+      }
+}

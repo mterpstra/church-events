@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Family Church Jupiter Events Calendar</title>
+      <title>Family Church Jupiter Event</title>
       <meta name="description" content="Family Church Jupute Events Calendar">
 
       <link rel="stylesheet" type="text/css" href="css/const.css">
@@ -10,31 +10,15 @@
       <link rel="stylesheet" type="text/css" href="css/calendar.css">
       <link rel="stylesheet" type="text/css" href="css/single_event.css">
       <link rel="stylesheet" type="text/css" href="css/focus_event.css">
-      <link rel="stylesheet" type="text/css" href="css/preview_event.css">
 
       <script src="https://unpkg.com/mustache@latest"></script>
       <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
       <script src="js/events.js"></script>
       <script src="js/render.js"></script>
-      <script src="js/base.js"></script>
-
+      <script src="js/single_event.js"></script>
    </head>
-
    <body>
-      <div id="month">
-         <div id="month-name"></div>
+      <div id="target">
       </div>
-      <div id="days-of-week">
-         <div>Sunday</div>
-         <div>Monday</div>
-         <div>Tuesday</div>
-         <div>Wednesday</div>
-         <div>Thursday</div>
-         <div>Friday</div>
-         <div>Saturday</div>
-      </div>
-      <div id="days-container"></div>
-      <div id="focus-event" class="focus-event"></div>
    </body>
-
 </html>

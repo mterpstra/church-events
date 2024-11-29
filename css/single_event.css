@@ -1,0 +1,11 @@
+.single-event {
+   height:100vh;
+}
+
+.single-event .event .body {
+   flex-direction:column;
+}
+
+.single-event .event .body .graphic img {
+   max-width:100%;
+}

@@ -1,4 +1,3 @@
-let events = {};
 document.addEventListener("DOMContentLoaded", (event) => {
    const queryString = window.location.search;
    const urlParams = new URLSearchParams(queryString);
@@ -10,16 +9,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
       focusElement.style.display = "none";
    });
 
-   events.data = manual_events.data.concat(imported_events.data);
-
    PopulateEventDatesArray();
    GenerateCalendar(month);
 
-   if (autoplay) {
-      AutoPlay(focusElement);
-   } else {
-      ClickPlay(focusElement);
-   }
+   setTimeout(function() {
+      if (autoplay) {
+         AutoPlay(focusElement);
+      } else {
+         ClickPlay(focusElement);
+      }
+   }, 1000) ;
+
 });
 
 
@@ -69,6 +69,7 @@ function PopulateEventDatesArray() {
    }
 }
 
+/* @todo: this should use a mustache template.. */
 function AddEventsToDay(thisday, day) {
    for(var i=0; i < events.data.length; i++) {
       for (j=0; j < events.data[i].Event_Dates.length; j++) {
@@ -78,17 +79,14 @@ function AddEventsToDay(thisday, day) {
 
          if (a == b) {
 
-            let event = document.createElement("div");
-            event.classList.add("event-preview");
-            event.dataset.eventindex = i;
-            event.dataset.eventdate = events.data[i].Event_Dates[j].Event_Start_Date;
+            let element = document.createElement("div");
+            element.classList.add("preview-event");
+            const t = Render("templates/preview-event.tmpl", events.data[i], element);
 
-            let title = document.createElement("div");
-            title.classList.add("title");
-            title.innerHTML = events.data[i].Event_Title;
+            element.dataset.eventindex = i;
+            element.dataset.eventdate = events.data[i].Event_Dates[j].Event_Start_Date;
 
-            event.appendChild(title);
-            day.appendChild(event);
+            day.appendChild(element);
          }
       }
    }
@@ -143,7 +141,7 @@ function GenerateCalendar(month) {
 
 function AutoPlay(focusElement) {
    focusElement.style.display = "block";
-   const elements = document.querySelectorAll('.event-preview');
+   const elements = document.querySelectorAll('.preview-event');
    SetFocusWithEvent(focusElement, elements[0]) ;
    let i=1;
    setInterval(function() {
@@ -156,43 +154,35 @@ function AutoPlay(focusElement) {
    }, 15000);
 }
 
-function GetHtmlForEvent(index, eventdate) {
-
-   if (events.data[index].Graphic_URL == null) {
-      events.data[index].Graphic_URL = './images/family_church_logo.png';
-   }
-
-   if (events.data[index].Description == null) {
-      events.data[index].Description = events.data[index].Event_Title;
-   }
-
-   const img = `<img src="${events.data[index].Graphic_URL}">`;
-   const graphic = `<div class="graphic">${img}</div>`;
-   const title = `<div class="title">${events.data[index].Event_Title}</div>`;
-   const description = `<div class="description">${events.data[index].Description}</div>`;
-   const location = `<div class="location">Where: ${events.data[index].Location.Location_Name}</div>`;
-   const contact = `<div class="contact">Contact: ${events.data[index].Primary_Contact.Display_Name}</div>`;
-   const date = `<div class="date">When: ${GetDisplayDate(eventdate)}</div>`;
-   const details = `<div class="details">${description + location + contact + date}</div>`;
-   const str = events.data[index].Event_Title.replaceAll(' ', '-').toLowerCase();
-   const event = `<div class="event ${str}">${title + graphic + details}</div>`;
-   return event;
+function AddQrCode(index, date) {
+   setTimeout(function() {
+      const element = document.getElementById('qrcode');
+      element.innerHTML = null;
+      const qrcode = new QRCode(element, {
+         text: `single_event.html?eventindex=${index}&eventdate=${date}`,
+         width: 200,
+         height: 200,
+         colorDark : '#000',
+         colorLight : '#fff',
+         correctLevel : QRCode.CorrectLevel.H
+      })
+   }, 500);
 }
 
 function ClickPlay(focusElement) {
-   const elements = document.querySelectorAll('.event-preview');
+   const elements = document.querySelectorAll('.preview-event');
    elements.forEach(element => {
       element.addEventListener('click', function(e) {
+         console.log("click");
 
-         element.classList.add("next");
-         setTimeout(function() {
-            element.classList.remove("next");
-         }, 2000);
+         const index = element.dataset.eventindex; 
+         const date =  element.dataset.eventdate;
 
+         Render("templates/focus-event.tmpl", events.data[index], focusElement);
          focusElement.style.display = "block";
          focusElement.style.opacity = 1;
-         focusElement.innerHTML = 
-            GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate);
+
+         AddQrCode(index, date);
       });
    });
 }
@@ -204,8 +194,15 @@ function SetFocusWithEvent(focusElement, element ) {
    }, 2000);
 
    focusElement.classList.remove("active");
-   focusElement.innerHTML = GetHtmlForEvent(element.dataset.eventindex, element.dataset.eventdate);
+
+   const index = element.dataset.eventindex;
+   const date  = element.dataset.eventdate;
+
+   Render("templates/focus-event.tmpl", events.data[index], focusElement);
+   AddQrCode(index, date);
    setTimeout(function() {
       focusElement.classList.add("active");
    }, 100);
 }
+
+

@@ -1,0 +1,21 @@
+:root {
+   --lightblue:  #72b7d8;
+   --darkblue: #00447c;
+   --gray: #5f6062;
+
+   --perfect-pearl: #ede6d9;
+   --minty-moses: #ced9b0;
+   --burnished-bronze: #998859;
+   --buoyant-blue: #72b7d8;
+   --cozy-crimson: #743338;
+}
+
+@font-face {
+   font-family: GothamRegular;
+   src: url(../fonts/gotham/gotham-regular/Gotham-Book.ttf);
+}
+
+@font-face {
+   font-family: RamillasRegular;
+   src: url(../fonts/ramillas/TTRamillas-Normal.ttf);
+}

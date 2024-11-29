@@ -1,0 +1,51 @@
+#month {
+   height:5%;
+   background:var(--darkblue);
+   color: white;
+   display:flex;
+   align-items:center;
+   flex-direction:row;
+   flex-direction:column;
+   justify-content:center;
+   font-size:24px;
+   font-weight:bold;
+}
+
+#days-of-week {
+   background:var(--lightblue);
+   color: var(--darkblue);
+   height:5%;
+   display:flex;
+   flex-direction:row;
+   justify-content:space-around;
+   align-items:center;
+   font-size:20px;
+   font-weight:bold;
+}
+
+#days-container {
+   height:90%;
+   display:flex;
+   flex-direction:column;
+   justify-content:space-around;
+   color:var(--darkblue);
+}
+
+.week {
+   height:20%;
+   display:flex;
+}
+
+.outside-the-month, .today {
+   background:var(--burnished-bronze);
+}
+
+.outside-the-month, .today span {
+   color:white;
+}
+
+.week > div {
+   flex:1;
+   border:1px solid gray;
+   padding:2px;
+}

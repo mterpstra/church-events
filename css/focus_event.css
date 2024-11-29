@@ -1,0 +1,32 @@
+.focus-event {
+   display:none;
+   opacity:0;
+   position:absolute;
+   width:80%;
+   height:80%;
+   left:10%;
+   top:10%;
+   border: 2px solid var(--gray);
+   border-radius:5px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+   background:white;
+}
+
+
+.focus-event .event .body {
+   flex-direction:row;
+
+}
+
+.focus-event .event .body > * { 
+   flex: 1;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+}
+
+.focus-event .event .body .graphic img {
+   max-width:90%;
+   max-height:90%;
+}
