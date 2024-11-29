@@ -14,16 +14,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
    const data = events.data[eventindex]; 
    data["eventdate"] = eventdate; 
 
+   console.log("here");
+   alert("here");
 
-   if (cls == "single-event") {
-      Render("templates/single-event.tmpl", data, "target");
-   } else if (cls == "focus-event") {
+   if (cls == "focus-event") {
       Render("templates/focus-event.tmpl", data, "target");
       const focusElement = document.getElementById("target");
       focusElement.style.display = "block";
       focusElement.style.opacity = 1;
    } else {
-      alert ("Unknown Template and Class Type");
+      Render("templates/single-event.tmpl", data, "target");
    }
 
 });
