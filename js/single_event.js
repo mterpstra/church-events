@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
    const data = events.data[eventindex]; 
    data["eventdate"] = eventdate; 
 
-   console.log("here");
-   alert("here");
-
    if (cls == "focus-event") {
       Render("templates/focus-event.tmpl", data, "target");
       const focusElement = document.getElementById("target");
