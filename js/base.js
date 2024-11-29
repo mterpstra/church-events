@@ -167,7 +167,7 @@ function AddQrCode(index, date) {
          colorLight : '#fff',
          correctLevel : QRCode.CorrectLevel.H
       })
-   }, 500);
+   }, 2000);
 }
 
 function ClickPlay(focusElement) {
