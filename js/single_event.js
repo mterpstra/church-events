@@ -26,20 +26,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
       alert ("Unknown Template and Class Type");
    }
 
-   setTimeout(function() {
-      console.log("setting qrcode");
-      //const url = `events.html?eventindex=${index}&eventdate=${eventdate}`;
-      const element = document.getElementById("qrcode");
-      element.innerHTML = null;
-      const url = "events.htm";
-      const qrcode = new QRCode(document.getElementById('qrcode'), {
-         text: url,
-         width: 200,
-         height: 200,
-         colorDark : '#000',
-         colorLight : '#fff',
-         correctLevel : QRCode.CorrectLevel.H
-      })
-   }, 500);
-
 });
