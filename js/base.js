@@ -160,7 +160,7 @@ function AddQrCode(index, date) {
       const element = document.getElementById('qrcode');
       element.innerHTML = null;
       const qrcode = new QRCode(element, {
-         text: `${window.location.origin}/single_event.html?eventindex=${index}&eventdate=${date}`,
+         text: `${window.location.origin}/church-events/single_event.html?eventindex=${index}&eventdate=${date}`,
          width: 200,
          height: 200,
          colorDark : '#000',
