@@ -155,11 +155,12 @@ function AutoPlay(focusElement) {
 }
 
 function AddQrCode(index, date) {
+   console.log(window.location);
    setTimeout(function() {
       const element = document.getElementById('qrcode');
       element.innerHTML = null;
       const qrcode = new QRCode(element, {
-         text: `single_event.html?eventindex=${index}&eventdate=${date}`,
+         text: `${window.location.href}single_event.html?eventindex=${index}&eventdate=${date}`,
          width: 200,
          height: 200,
          colorDark : '#000',
