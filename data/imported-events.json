@@ -10,11 +10,15 @@
         "Latitude": null,
         "Longitude": null
       },
-      "Description": null,
+      "Description": "Join us for this special candlelight celebration for our Lord Jesus Christs birth", 
       "Enable_Payment_Plan": false,
       "Event_End_Date": "2024-12-24T19:00:00",
       "Event_ID": 83928,
-      "Event_Start_Date": "2024-12-24T15:00:00",
+      "Event_Dates" : [
+         {"Event_Start_Date": "2024-12-24T15:00:00"}, 
+         {"Event_Start_Date": "2024-12-24T16:30:00"}, 
+         {"Event_Start_Date": "2024-12-24T18:00:00"}
+      ],
       "Event_Title": "Christmas Eve Services",
       "Event_Type": "Special Event",
       "Location": {
