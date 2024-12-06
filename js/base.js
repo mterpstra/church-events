@@ -155,34 +155,33 @@ function AutoPlay(focusElement) {
 }
 
 function AddQrCode(index, date) {
-   console.log(window.location);
    setTimeout(function() {
       const element = document.getElementById('qrcode');
       element.innerHTML = null;
+      const url = `${window.location.origin}/church-events/single_event.html?eventindex=${index}&eventdate=${date}`;
+      console.log(url);
       const qrcode = new QRCode(element, {
-         text: `${window.location.origin}/church-events/single_event.html?eventindex=${index}&eventdate=${date}`,
-         width: 200,
-         height: 200,
+         text: url,
+         width: 300,
+         height: 300,
          colorDark : '#000',
          colorLight : '#fff',
          correctLevel : QRCode.CorrectLevel.H
       })
-   }, 2000);
+   }, 500);
 }
 
 function ClickPlay(focusElement) {
    const elements = document.querySelectorAll('.preview-event');
    elements.forEach(element => {
       element.addEventListener('click', function(e) {
-         console.log("click");
-
          const index = element.dataset.eventindex; 
-         const date =  element.dataset.eventdate;
-
-         Render("templates/focus-event.tmpl", events.data[index], focusElement);
+         const data = events.data[index]; 
+         const date = GetDisplayDate(element.dataset.eventdate);
+         data["eventdate"] = date;
+         Render("templates/focus-event.tmpl", data, focusElement);
          focusElement.style.display = "block";
          focusElement.style.opacity = 1;
-
          AddQrCode(index, date);
       });
    });
@@ -193,13 +192,12 @@ function SetFocusWithEvent(focusElement, element ) {
    setTimeout(function() {
       element.classList.remove("next");
    }, 2000);
-
    focusElement.classList.remove("active");
-
    const index = element.dataset.eventindex;
-   const date  = element.dataset.eventdate;
-
-   Render("templates/focus-event.tmpl", events.data[index], focusElement);
+   const data = events.data[index]; 
+   const date = GetDisplayDate(element.dataset.eventdate);
+   data["eventdate"] = date;
+   Render("templates/focus-event.tmpl", data, focusElement);
    AddQrCode(index, date);
    setTimeout(function() {
       focusElement.classList.add("active");

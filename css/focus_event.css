@@ -27,6 +27,6 @@
 }
 
 .focus-event .event .body .graphic img {
-   max-width:90%;
-   max-height:90%;
+   max-width:300px;
+   max-height:300px;
 }

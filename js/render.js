@@ -6,8 +6,6 @@ function Render(file, data, id) {
       .then(function (template) {
          const rendered = Mustache.render(template, data);
 
-         console.log("typeof id", typeof id)
-
          if (typeof id == "string") {
             const target = document.getElementById(id);
             target.innerHTML = rendered;
