@@ -1,3 +1,4 @@
+let qrCodeSize = 300;
 document.addEventListener("DOMContentLoaded", (event) => {
    const queryString = window.location.search;
    const urlParams = new URLSearchParams(queryString);
@@ -12,6 +13,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
    PopulateEventDatesArray();
    GenerateCalendar(month);
 
+
+   qrCodeSize = parseInt(urlParams.get("qrcodesize"));
+   showScreenInfo();
+
+
    setTimeout(function() {
       if (autoplay) {
          AutoPlay(focusElement);
@@ -19,8 +25,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
          ClickPlay(focusElement);
       }
    }, 1000) ;
-
 });
+
+
+function showScreenInfo() {
+   const width = window.screen.width;
+   const height = window.screen.height;
+   const resolution = window.devicePixelRatio;
+
+   let info = `Screen size: ${width} x ${height} pixels\nResolution: ${resolution} dppx`;
+   info += ` qrcodesize: ${qrCodeSize}`;
+   alert(info);
+}
+
 
 
 // Converts a date object to a comparible string: YYYY-MM-DD  (no time).  
@@ -155,6 +172,11 @@ function AutoPlay(focusElement) {
 }
 
 function AddQrCode(index, date) {
+
+
+
+
+
    setTimeout(function() {
       const element = document.getElementById('qrcode');
       element.innerHTML = null;
@@ -162,8 +184,8 @@ function AddQrCode(index, date) {
       console.log(url);
       const qrcode = new QRCode(element, {
          text: url,
-         width: 300,
-         height: 300,
+         width: qrCodeSize,
+         height: qrCodeSize,
          colorDark : '#000',
          colorLight : '#fff',
          correctLevel : QRCode.CorrectLevel.H
