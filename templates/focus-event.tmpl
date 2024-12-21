@@ -3,10 +3,17 @@
    <div class="body">
       <div class="graphic"><img src={{Graphic_URL}}></div>
       <div class="info">
-         <div class="description">{{Description}}</div>
+         <div class="description">
+            {{Description}}
+            <div>{{Line2}}</div>
+         </div>
          <div class="location">Where: {{Location.Location_Name}}</div>
-         <div class="contact">Contact: {{Primary_Contact.Display_Name}}</div>
-         <div class="date">When: {{eventdate}}</div>
+         <div class="contact">
+            Contact: 
+            {{Primary_Contact.First_Name}} 
+            {{Primary_Contact.Last_Name}}
+         </div>
+         <div class="date">{{eventdate}}</div>
       </div>
       <div id="qrcode" class="qrcode"></div>
    </div>

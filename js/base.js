@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
    const urlParams = new URLSearchParams(queryString);
    const autoplay = urlParams.get("autoplay");
    const month = urlParams.get("month");
+   const year = urlParams.get("year");
    const focusElement = document.getElementById("focus-event");
 
    focusElement.addEventListener('click', function(e) {
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
    });
 
    PopulateEventDatesArray();
-   GenerateCalendar(month);
+   GenerateCalendar(month, year);
 
    setTimeout(function() {
       if (autoplay) {
@@ -91,7 +92,7 @@ function AddEventsToDay(thisday, day) {
    }
 }
 
-function GenerateCalendar(month) {
+function GenerateCalendar(month, year) {
    const months = [
       "January", "February", "March", "April", 
       "May", "June", "July", "August", 
@@ -105,6 +106,9 @@ function GenerateCalendar(month) {
    if (month != null) {
       month = month-1;
       today = new Date(today.getFullYear(), month, 1);
+      if (year != null) {
+         today = new Date(year, month, 1);
+      }
    } 
    const first = new Date(today.getFullYear(), today.getMonth(), 1);
    document.getElementById("month-name").innerHTML = months[today.getMonth()];
@@ -154,11 +158,6 @@ function AutoPlay(focusElement) {
 }
 
 function AddQrCode(index, date) {
-
-
-
-
-
    setTimeout(function() {
       const element = document.getElementById('qrcode');
       element.innerHTML = null;
