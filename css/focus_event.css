@@ -26,7 +26,7 @@
    justify-content:center;
 }
 
-.focus-event .event .body .graphic img {
+.focus-event img {
    max-width:90%;
    max-height:90%;
 }
