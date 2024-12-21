@@ -30,3 +30,7 @@
    max-width:90%;
    max-height:90%;
 }
+
+.focus-event .graphic img {
+   border-radius:5px;
+}
