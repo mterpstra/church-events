@@ -5,7 +5,6 @@
    flex-direction:column;
    color:var(--darkblue);
    font-family: GothamRegular;
-   font-size:1em;
 }
 
 .title, .footer {
@@ -15,7 +14,6 @@
    justify-content:center;
    align-items:center;
    height:10%;
-   font-size:1.5em;
 }
 
 .body {
@@ -33,7 +31,6 @@
 }
 
 .info {
-   font-size:1em;
    line-height:1.25em;
 }
 
