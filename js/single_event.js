@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
-   console.log("document loaded");
-
    const queryString = window.location.search;
    const urlParams = new URLSearchParams(queryString);
    const cls = urlParams.get("class");

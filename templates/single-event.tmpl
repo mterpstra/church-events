@@ -1,13 +1,15 @@
 <div class="event">
-   <div class="title">{{Event_Title}}</div>
-   <div class="body">
-      <div class="graphic"><img src={{Graphic_URL}}></div>
-      <div class="info">
-         <div class="description">{{Description}}</div>
-         <div class="location">{{Location.Location_Name}}</div>
-         <div class="contact">{{Primary_Contact.Display_Name}}</div>
-         <div class="date">{{eventdate}}</div>
-      </div>
+   <h1>{{Event_Title}}</h1>
+   <img src={{Graphic_URL}}>
+   <div>
+      <p>{{Description}}</p>
+      <br/>
+      <p>{{Location.Location_Name}}</p>
+      <p>
+         Contact:
+         {{Primary_Contact.First_Name}}
+         {{Primary_Contact.Last_Name}}
+      </p>
+      <p>{{eventdate}}</p>
    </div>
-   <div class="footer">Family Church Jupiter</div>
 </div>
