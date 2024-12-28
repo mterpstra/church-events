@@ -26,11 +26,11 @@
    justify-content:center;
 }
 
-.focus-event img {
-   max-width:90%;
-   max-height:90%;
+.focus-event .graphic img {
+   width:200px;
+   border-radius:5px;
 }
 
-.focus-event .graphic img {
-   border-radius:5px;
+.focus-event .qrcode img {
+   width:150px;
 }
