@@ -10,25 +10,33 @@
         "Latitude": null,
         "Longitude": null
       },
-      "Description": "Join us for this special candlelight celebration for our Lord Jesus Christs birth", 
+      "Description": "We believe in the power of prayer! Join us January 27th to February 2nd for our 7 Days of Prayer. We will join together each morning and pray for each other, our church, community, nation, and world. ",
       "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-24T19:00:00",
-      "Event_ID": 83928,
-      "Event_Dates" : [
-         {"Event_Start_Date": "2024-12-24T15:00:00"}, 
-         {"Event_Start_Date": "2024-12-24T16:30:00"}, 
-         {"Event_Start_Date": "2024-12-24T18:00:00"}
-      ],
-      "Event_Title": "Christmas Eve Services",
+      "Event_End_Date": "2025-01-27T08:00:00",
+      "Event_ID": 84274,
+      "Event_Start_Date": "2025-01-27T07:00:00",
+      "Event_Title": "7 Days of Prayer",
       "Event_Type": "Special Event",
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
       "External_Registration_URL": null,
       "Featured_On_Calendar": false,
       "Force_Login": false,
       "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/christmas-eve-services.jpeg",
+      "Graphic_URL": null,
+      "Location": {
+        "Address": {
+          "Address_ID": 17185,
+          "Address_Line_1": "18477 Loxahatchee River Rd",
+          "Address_Line_2": null,
+          "City": "Jupiter",
+          "Latitude": null,
+          "Longitude": null,
+          "Map_Image_URL": null,
+          "Postal_Code": "33458",
+          "State": "FL"
+        },
+        "Location_ID": 5,
+        "Location_Name": "Jupiter"
+      },
       "Meeting_Instructions": null,
       "Ministry": {
         "Ministry_ID": 11,
@@ -51,11 +59,11 @@
         "Program_ID": 158,
         "Program_Name": "FC Jupiter Connections"
       },
-      "Registration_Active": false,
+      "Registration_Active": true,
       "Registration_End": null,
       "Registration_Form": null,
       "Registration_Start": null,
-      "Short_Description": "",
+      "Short_Description": "We believe in the power of prayer! Join us January 27th to February 2nd for our 7 Days of Prayer. We will join together each morning and pray for...",
       "Top_Featured": false
     },
     {
@@ -68,72 +76,18 @@
         "Latitude": null,
         "Longitude": null
       },
-      "Description": "Bring a batch of your favorite Christmas cookies to share and take home an assortment of delicious treats.",
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
+      "Description": null,
       "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-22T12:30:00",
-      "Event_ID": 83927,
-      "Event_Start_Date": "2024-12-22T09:00:00",
-      "Event_Title": "Cookie Exchange ",
-      "Event_Type": "Special Event",
-      "External_Registration_URL": null,
-      "Featured_On_Calendar": false,
-      "Force_Login": false,
-      "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/christmas-cookie-exchange.jpeg",
-      "Meeting_Instructions": null,
-      "Ministry": {
-        "Ministry_ID": 11,
-        "Ministry_Name": "Connections",
-        "Nickname": "Connections"
-      },
-      "Minutes_for_Cleanup": 0,
-      "Minutes_for_Setup": 0,
-      "Participants_Expected": null,
-      "Payment_Plan_Amount_Threshold": null,
-      "Primary_Contact": {
-        "Contact_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOaWNrbmFtZSI6IkJldHN5IiwiRmlyc3RfTmFtZSI6IkVsaXphYmV0aCIsIkxhc3RfTmFtZSI6IlZhbGUiLCJEaXNwbGF5X05hbWUiOiJWYWxlLCBCZXRzeSIsIkNvbnRhY3RfSUQiOjcwOTE4fQ.sszQAHrqM_qbydGNsGOqRQXgwvpBmW0sZADizOghWBc",
-        "Display_Name": "Vale, Betsy",
-        "First_Name": "Elizabeth",
-        "Last_Name": "Vale",
-        "Nickname": "Betsy"
-      },
-      "Product": null,
-      "Program": {
-        "Program_ID": 158,
-        "Program_Name": "FC Jupiter Connections"
-      },
-      "Registration_Active": false,
-      "Registration_End": null,
-      "Registration_Form": null,
-      "Registration_Start": null,
-      "Short_Description": "Bring a batch of your favorite Christmas cookies to share and take home an assortment of delicious treats.",
-      "Top_Featured": false
-    },
-    {
-      "Allow_Registration": false,
-      "Can_Bulk_Register": false,
-      "Cancelled": false,
-      "Congregation": {
-        "Congregation_ID": 16,
-        "Congregation_Name": "Jupiter",
-        "Latitude": null,
-        "Longitude": null
-      },
-      "Description": "Have you attended First Connection at your neighborhood church? First Connection is an invitation for you to share a meal with our pastors and ministry leaders so we can get to know you and you can get to know us. We would love to meet you and hear your story.",
-      "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-01T12:00:00",
-      "Event_ID": 83919,
-      "Event_Start_Date": "2024-12-01T11:00:00",
+      "Event_End_Date": "2025-01-12T12:00:00",
+      "Event_ID": 84276,
+      "Event_Start_Date": "2025-01-12T11:00:00",
       "Event_Title": "First Connection",
       "Event_Type": "Special Event",
       "External_Registration_URL": null,
       "Featured_On_Calendar": true,
       "Force_Login": false,
       "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "https://gofamilychurch.org/wp-content/uploads/2021/05/table_gather_multicultural_women.jpg",
+      "Graphic_URL": null,
       "Location": {
         "Address": {
           "Address_ID": 17185,
@@ -166,21 +120,15 @@
         "Last_Name": "Vale",
         "Nickname": "Betsy"
       },
-      "Product": {
-        "Active": true,
-        "Base_Price": "0.00",
-        "Deposit_Price": null,
-        "Product_ID": 77,
-        "Product_Name": "Jupiter Events"
-      },
+      "Product": null,
       "Program": {
         "Program_ID": 158,
         "Program_Name": "FC Jupiter Connections"
       },
-      "Registration_Active": true,
-      "Registration_End": "2024-12-01T09:00:00",
-      "Registration_Form": 100,
-      "Registration_Start": "2024-11-22T12:00:00",
+      "Registration_Active": false,
+      "Registration_End": null,
+      "Registration_Form": null,
+      "Registration_Start": null,
       "Short_Description": "",
       "Top_Featured": false
     },
@@ -194,18 +142,18 @@
         "Latitude": null,
         "Longitude": null
       },
-      "Description": "Create your own gingerbread house and enter into our gingerbread competition. Winners will receive a special prize! ",
+      "Description": "Learn about all of our small groups through Group Connect on January 12th and 19th.",
       "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-08T12:30:00",
-      "Event_ID": 83920,
-      "Event_Start_Date": "2024-12-08T09:30:00",
-      "Event_Title": "Gingerbread House Competition",
+      "Event_End_Date": "2025-01-12T12:30:00",
+      "Event_ID": 84272,
+      "Event_Start_Date": "2025-01-12T10:30:00",
+      "Event_Title": "Group Connect",
       "Event_Type": "Special Event",
       "External_Registration_URL": null,
       "Featured_On_Calendar": false,
       "Force_Login": false,
       "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/gingerbread-house.jpeg",
+      "Graphic_URL": null,
       "Location": {
         "Address": {
           "Address_ID": 17185,
@@ -247,7 +195,7 @@
       "Registration_End": null,
       "Registration_Form": null,
       "Registration_Start": null,
-      "Short_Description": "Create your own gingerbread house and enter into our gingerbread competition. Winners will receive a special prize!",
+      "Short_Description": "Learn about all of our small groups through Group Connect on January 12th and 19th.",
       "Top_Featured": false
     },
     {
@@ -260,84 +208,18 @@
         "Latitude": null,
         "Longitude": null
       },
-      "Description": "Students will prepare Christmas-themed pancakes, and kids can decorate them with fun toppings and designs after each service.",
+      "Description": "Learn about getting connected and joining a group at Group Connect on January 12th and 19th.",
       "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-01T12:00:00",
-      "Event_ID": 83918,
-      "Event_Start_Date": "2024-12-01T09:00:00",
-      "Event_Title": "Holiday Pancakes",
-      "Event_Type": "Worship Services",
-      "External_Registration_URL": null,
-      "Featured_On_Calendar": true,
-      "Force_Login": false,
-      "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/pancake-decorate.jpeg",
-      "Location": {
-        "Address": {
-          "Address_ID": 17185,
-          "Address_Line_1": "18477 Loxahatchee River Rd",
-          "Address_Line_2": null,
-          "City": "Jupiter",
-          "Latitude": null,
-          "Longitude": null,
-          "Map_Image_URL": null,
-          "Postal_Code": "33458",
-          "State": "FL"
-        },
-        "Location_ID": 5,
-        "Location_Name": "Jupiter"
-      },
-      "Meeting_Instructions": null,
-      "Ministry": {
-        "Ministry_ID": 11,
-        "Ministry_Name": "Connections",
-        "Nickname": "Connections"
-      },
-      "Minutes_for_Cleanup": 0,
-      "Minutes_for_Setup": 0,
-      "Participants_Expected": null,
-      "Payment_Plan_Amount_Threshold": null,
-      "Primary_Contact": {
-        "Contact_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOaWNrbmFtZSI6IkJldHN5IiwiRmlyc3RfTmFtZSI6IkVsaXphYmV0aCIsIkxhc3RfTmFtZSI6IlZhbGUiLCJEaXNwbGF5X05hbWUiOiJWYWxlLCBCZXRzeSIsIkNvbnRhY3RfSUQiOjcwOTE4fQ.sszQAHrqM_qbydGNsGOqRQXgwvpBmW0sZADizOghWBc",
-        "Display_Name": "Vale, Betsy",
-        "First_Name": "Elizabeth",
-        "Last_Name": "Vale",
-        "Nickname": "Betsy"
-      },
-      "Product": null,
-      "Program": {
-        "Program_ID": 158,
-        "Program_Name": "FC Jupiter Connections"
-      },
-      "Registration_Active": false,
-      "Registration_End": null,
-      "Registration_Form": null,
-      "Registration_Start": null,
-      "Short_Description": "Students will prepare Christmas-themed pancakes, and kids can decorate them with fun toppings and designs after each service.",
-      "Top_Featured": false
-    },
-    {
-      "Allow_Registration": false,
-      "Can_Bulk_Register": false,
-      "Cancelled": false,
-      "Congregation": {
-        "Congregation_ID": 16,
-        "Congregation_Name": "Jupiter",
-        "Latitude": null,
-        "Longitude": null
-      },
-      "Description": "Students, join us for our annual Christmas party! We will have food, games, and a white elephant gift exchange ($20 max purchase).",
-      "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-15T19:00:00",
-      "Event_ID": 83923,
-      "Event_Start_Date": "2024-12-15T17:00:00",
-      "Event_Title": "Student Christmas Party",
+      "Event_End_Date": "2025-01-19T12:30:00",
+      "Event_ID": 84273,
+      "Event_Start_Date": "2025-01-19T10:30:00",
+      "Event_Title": "Group Connect",
       "Event_Type": "Special Event",
       "External_Registration_URL": null,
       "Featured_On_Calendar": false,
       "Force_Login": false,
       "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/student-christmas-party.jpeg",
+      "Graphic_URL": null,
       "Location": {
         "Address": {
           "Address_ID": 17185,
@@ -355,9 +237,9 @@
       },
       "Meeting_Instructions": null,
       "Ministry": {
-        "Ministry_ID": 11,
-        "Ministry_Name": "Connections",
-        "Nickname": "Connections"
+        "Ministry_ID": 4,
+        "Ministry_Name": "Students",
+        "Nickname": "Students"
       },
       "Minutes_for_Cleanup": 0,
       "Minutes_for_Setup": 0,
@@ -372,80 +254,14 @@
       },
       "Product": null,
       "Program": {
-        "Program_ID": 158,
-        "Program_Name": "FC Jupiter Connections"
+        "Program_ID": 97,
+        "Program_Name": "FC Jupiter Students"
       },
       "Registration_Active": false,
       "Registration_End": null,
       "Registration_Form": null,
       "Registration_Start": null,
-      "Short_Description": "Students, join us for our annual Christmas party! We will have food, games, and a white elephant gift exchange ($20 max purchase).",
-      "Top_Featured": false
-    },
-    {
-      "Allow_Registration": false,
-      "Can_Bulk_Register": false,
-      "Cancelled": false,
-      "Congregation": {
-        "Congregation_ID": 16,
-        "Congregation_Name": "Jupiter",
-        "Latitude": null,
-        "Longitude": null
-      },
-      "Description": "Wear your favorite Christmas sweater and join the fun. Prizes will be awarded for the ugliest sweaters.",
-      "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-15T12:30:00",
-      "Event_ID": 83922,
-      "Event_Start_Date": "2024-12-15T09:30:00",
-      "Event_Title": "Ugly Christmas Sweater Contest",
-      "Event_Type": "Special Event",
-      "External_Registration_URL": null,
-      "Featured_On_Calendar": false,
-      "Force_Login": false,
-      "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/ugly-sweater.jpeg",
-      "Location": {
-        "Address": {
-          "Address_ID": 17185,
-          "Address_Line_1": "18477 Loxahatchee River Rd",
-          "Address_Line_2": null,
-          "City": "Jupiter",
-          "Latitude": null,
-          "Longitude": null,
-          "Map_Image_URL": null,
-          "Postal_Code": "33458",
-          "State": "FL"
-        },
-        "Location_ID": 5,
-        "Location_Name": "Jupiter"
-      },
-      "Meeting_Instructions": null,
-      "Ministry": {
-        "Ministry_ID": 11,
-        "Ministry_Name": "Connections",
-        "Nickname": "Connections"
-      },
-      "Minutes_for_Cleanup": 0,
-      "Minutes_for_Setup": 0,
-      "Participants_Expected": null,
-      "Payment_Plan_Amount_Threshold": null,
-      "Primary_Contact": {
-        "Contact_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOaWNrbmFtZSI6IkJldHN5IiwiRmlyc3RfTmFtZSI6IkVsaXphYmV0aCIsIkxhc3RfTmFtZSI6IlZhbGUiLCJEaXNwbGF5X05hbWUiOiJWYWxlLCBCZXRzeSIsIkNvbnRhY3RfSUQiOjcwOTE4fQ.sszQAHrqM_qbydGNsGOqRQXgwvpBmW0sZADizOghWBc",
-        "Display_Name": "Vale, Betsy",
-        "First_Name": "Elizabeth",
-        "Last_Name": "Vale",
-        "Nickname": "Betsy"
-      },
-      "Product": null,
-      "Program": {
-        "Program_ID": 158,
-        "Program_Name": "FC Jupiter Connections"
-      },
-      "Registration_Active": false,
-      "Registration_End": null,
-      "Registration_Form": null,
-      "Registration_Start": null,
-      "Short_Description": "Wear your favorite Christmas sweater and join the fun. Prizes will be awarded for the ugliest sweaters.",
+      "Short_Description": "Learn about getting connected and joining a group at Group Connect on January 12th and 19th.",
       "Top_Featured": false
     },
     {
@@ -458,18 +274,18 @@
         "Latitude": null,
         "Longitude": null
       },
-      "Description": "Young adult couples, join us for an evening of festive fun! We will enjoy a Christmas dinner and a white elephant gift exchange ",
+      "Description": "We are so excited for our Kids New Believers Class, coming up on Sunday, January 12 in Room 108! It is a three-week class (January 12, 19, and 26) that is open for kids who have completed Grade 2 and have made a profession of faith or have an interest in learning more about their faith walk.\n\nAn RSVP is required. At least one parent is required to attend the class each week, and this class is a prerequisite for baptism.\n\nTo register, click the link below. ",
       "Enable_Payment_Plan": false,
-      "Event_End_Date": "2024-12-08T18:00:00",
-      "Event_ID": 83921,
-      "Event_Start_Date": "2024-12-08T16:00:00",
-      "Event_Title": "Young Adults Christmas Party",
-      "Event_Type": "Special Event",
-      "External_Registration_URL": "https://shorturl.at/5hzuK",
-      "Featured_On_Calendar": false,
+      "Event_End_Date": "2025-01-12T12:00:00",
+      "Event_ID": 83781,
+      "Event_Start_Date": "2025-01-12T11:00:00",
+      "Event_Title": "Kids New Believers",
+      "Event_Type": "Regular Activities",
+      "External_Registration_URL": null,
+      "Featured_On_Calendar": true,
       "Force_Login": false,
-      "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": "images/young-adult-christmas-party.jpeg",
+      "Graphic_Thumbnail_URL": "https://mp.gofamilychurch.org/ministryplatformapi/files/53fe8878-c6a9-4b66-80fa-677edb78af3c?$thumbnail=true",
+      "Graphic_URL": "https://mp.gofamilychurch.org/ministryplatformapi/files/53fe8878-c6a9-4b66-80fa-677edb78af3c",
       "Location": {
         "Address": {
           "Address_ID": 17185,
@@ -487,31 +303,37 @@
       },
       "Meeting_Instructions": null,
       "Ministry": {
-        "Ministry_ID": 11,
-        "Ministry_Name": "Connections",
-        "Nickname": "Connections"
+        "Ministry_ID": 2,
+        "Ministry_Name": "Kids",
+        "Nickname": "Kids"
       },
       "Minutes_for_Cleanup": 0,
       "Minutes_for_Setup": 0,
       "Participants_Expected": null,
       "Payment_Plan_Amount_Threshold": null,
       "Primary_Contact": {
-        "Contact_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOaWNrbmFtZSI6IkRvdWciLCJGaXJzdF9OYW1lIjoiRG91ZyIsIkxhc3RfTmFtZSI6IkJhcm5lcyIsIkRpc3BsYXlfTmFtZSI6IkJhcm5lcywgRG91ZyIsIkNvbnRhY3RfSUQiOjE1OTU2Nn0.RU1dkvFO0UzVeRxdNO6QsjGTlS53nSIVV7jCNHxJMs4",
-        "Display_Name": "Barnes, Doug",
-        "First_Name": "Doug",
-        "Last_Name": "Barnes",
-        "Nickname": "Doug"
+        "Contact_Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOaWNrbmFtZSI6IldlbmRpIiwiRmlyc3RfTmFtZSI6IldlbmRpIiwiTGFzdF9OYW1lIjoiU2VybmEiLCJEaXNwbGF5X05hbWUiOiJTZXJuYSwgV2VuZGkiLCJDb250YWN0X0lEIjo4ODA3Mn0.ETfrOsNcX_fN6y1fJQdFD3eNxnJVB-wrAwfkmGSzwGM",
+        "Display_Name": "Serna, Wendi",
+        "First_Name": "Wendi",
+        "Last_Name": "Serna",
+        "Nickname": "Wendi"
       },
-      "Product": null,
+      "Product": {
+        "Active": true,
+        "Base_Price": "0.00",
+        "Deposit_Price": null,
+        "Product_ID": 111,
+        "Product_Name": "Kids New Believers Events"
+      },
       "Program": {
-        "Program_ID": 158,
-        "Program_Name": "FC Jupiter Connections"
+        "Program_ID": 99,
+        "Program_Name": "Jupiter Kids"
       },
       "Registration_Active": true,
-      "Registration_End": null,
-      "Registration_Form": null,
-      "Registration_Start": null,
-      "Short_Description": "Young adult couples, join us for an evening of festive fun! We will enjoy a Christmas dinner and a white elephant gift exchange",
+      "Registration_End": "2025-01-12T11:00:00",
+      "Registration_Form": 320,
+      "Registration_Start": "2023-06-07T10:00:00",
+      "Short_Description": "We are so excited for our Kids New Believers Class, coming up on Sunday, January 12 in Room 108! It is a three-week class (January 12, 19, and 26)...",
       "Top_Featured": false
     }
   ],
@@ -519,6 +341,6 @@
     "page_num": 1,
     "page_size": 100,
     "pages": 1,
-    "total_items": 8
+    "total_items": 5
   }
 }

@@ -1,22 +1,6 @@
 {
   "data": [
     {
-      "Event_Title": "First Connection",
-      "Description": "This is an invitation for you to share a meal with our pastors and ministry leaders so we can get to know you and you can get to know us. We would love to meet you and hear your story.",
-      "Event_Dates" : [
-         {"Event_Start_Date": "2025-01-05T12:00:00"}
-      ],
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
-      "Graphic_URL": "images/first-connections.jpeg",
-      "Primary_Contact": {
-        "Display_Name": "Andrew Hernandez",
-        "First_Name": "Andrew",
-        "Last_Name": "Hernandez"
-      }
-    },
-    {
       "Event_Title": "Church Services",
       "Description": "Join us for our Sunday morning workship services.",
       "Line2": "9:30AM and 11:00AM",
@@ -56,26 +40,6 @@
       }
     },
     {
-      "Event_Title": "Empty Nester's Group",
-      "Description": "Kids out of the house?  Join others in this phase of life for some fun and fellowship.", 
-      "Event_Dates" : [
-         {"Event_Start_Date": "2025-01-02T17:45:00"}, 
-         {"Event_Start_Date": "2025-01-09T17:45:00"}, 
-         {"Event_Start_Date": "2025-01-16T17:45:00"}, 
-         {"Event_Start_Date": "2025-01-23T17:45:00"},
-         {"Event_Start_Date": "2025-01-30T17:45:00"}
-      ],
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
-      "Graphic_URL": "images/empty-nesters.jpeg",
-      "Primary_Contact": {
-        "Display_Name": "VanPortfleet, Gary",
-        "First_Name": "Gary",
-        "Last_Name": "VanPortfleet"
-      }
-    },
-    {
       "Event_Title": "Prayer Group",
       "Description": "We believe in the power of prayer.  Interested in joining this group?", 
       "Event_Dates" : [
@@ -92,64 +56,6 @@
         "Display_Name": "Evie Komara",
         "First_Name": "Evie",
         "Last_Name": "Komara"
-      }
-    },
-    {
-      "Event_Title": "Young Married Couples",
-      "Description": "Young and Married?  Join others in this phase of life for fun and fellowship.",
-      "Event_Dates" : [
-         {"Event_Start_Date": "2025-01-03T18:30:00"}, 
-         {"Event_Start_Date": "2025-01-10T18:30:00"}, 
-         {"Event_Start_Date": "2025-01-17T18:30:00"}, 
-         {"Event_Start_Date": "2025-01-24T18:30:00"},
-         {"Event_Start_Date": "2025-01-31T18:30:00"}
-      ],
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
-      "Graphic_URL": "images/young-married-couples.jpeg",
-      "Primary_Contact": {
-        "Display_Name": "Doug Barnes",
-        "First_Name": "Doug",
-        "Last_Name": "Barnes"
-      }
-    },
-    {
-      "Event_Title": "Chosen by God",
-      "Description": "Focus: Book and Sermon Based Demographic for Men",
-      "Event_Dates" : [
-         {"Event_Start_Date": "2025-01-08T13:00:00"}, 
-         {"Event_Start_Date": "2025-01-15T13:00:00"}, 
-         {"Event_Start_Date": "2025-01-22T13:00:00"},
-         {"Event_Start_Date": "2025-01-29T13:00:00"}
-      ],
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
-      "Graphic_URL": "images/bible-study.jpeg",
-      "Primary_Contact": {
-        "Display_Name": "John Serna",
-        "First_Name": "John",
-        "Last_Name": "Serna"
-      }
-    },
-    {
-      "Event_Title": "Student Ministry",
-      "Description": "For all students: 6th grade – 12th grade. You don't want to miss this dynamic study with students who are growing in their relationship with Christ. Come and learn God's word while enjoying some food and fellowship.",
-      "Event_Dates" : [
-         {"Event_Start_Date": "2025-01-05T17:00:00"}, 
-         {"Event_Start_Date": "2025-01-12T17:00:00"}, 
-         {"Event_Start_Date": "2025-01-19T17:00:00"},
-         {"Event_Start_Date": "2025-01-26T17:00:00"}
-      ],
-      "Location": {
-         "Location_Name":"Jupiter"
-      },
-      "Graphic_URL": "images/student-ministry.jpeg",
-      "Primary_Contact": {
-        "Display_Name": "Ben Robins",
-        "First_Name": "Ben",
-        "Last_Name": "Robins"
       }
     }
   ]
