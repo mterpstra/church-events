@@ -21,7 +21,7 @@
       "Featured_On_Calendar": false,
       "Force_Login": false,
       "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": null,
+      "Graphic_URL": "images/prayer-group.jpeg",
       "Location": {
         "Address": {
           "Address_ID": 17185,
@@ -219,7 +219,7 @@
       "Featured_On_Calendar": false,
       "Force_Login": false,
       "Graphic_Thumbnail_URL": null,
-      "Graphic_URL": null,
+      "Graphic_URL": "images/small-groups.jpeg",
       "Location": {
         "Address": {
           "Address_ID": 17185,
