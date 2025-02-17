@@ -1,8 +1,11 @@
 let events = {};
 events.data = [];
+
 const a = LoadEventsFromFile("data/imported-events.json");
 const b = LoadEventsFromFile("data/manual-events.json");
-events.data = a.data.concat(b.data);
+const c = LoadEventsFromFile("data/imported-groups.json");
+
+events.data = events.data.concat(a.data, b.data, ConvertGroupsToEvents(c));
 console.log("total events", events);
 
 function LoadEventsFromFile (file) {
@@ -15,4 +18,22 @@ function LoadEventsFromFile (file) {
       return json;
    }
    return null;
+}
+
+
+function ConvertGroupsToEvents(groups) {
+   var events = [];
+   console.log("Converting groups to events", groups);
+
+   for (var i=0; i < groups.data.length; i++) {
+      console.log(groups.data[i]);
+      events[i] = {};
+      events[i].Event_Start_Date = groups.data[i].Start_Date;
+      events[i].Event_Title = groups.data[i].Group_Name;
+      events[i].Primary_Contact = groups.data[i].Primary_Contact;
+      events[i].Description = groups.data[i].Description;
+   }
+
+   console.log("Resulting events", events);
+   return events;
 }
